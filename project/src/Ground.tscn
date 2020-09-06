@@ -18,6 +18,8 @@
 [ext_resource path="res://project/assets/png/Tiles/Tile (1).png" type="Texture" id=16]
 
 
+
+
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 96, 0, 96 )
 
