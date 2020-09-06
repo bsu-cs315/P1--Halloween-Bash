@@ -1,20 +1,18 @@
 extends RigidBody2D
 
+export var strength : float = 300
+var trajPoint = Vector2(100, -100)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	# gravity_scale = 0
-	pass
+func _process(delta):
+	$Line2D.set_point_position(1, trajPoint)
 	
-func _integrate_forces(state):
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if Input.is_action_just_pressed("launch"):
+		var direction = trajPoint.normalized()
+		var velocity = direction * strength
+		apply_impulse(Vector2.ZERO, velocity)
+	if Input.is_action_just_pressed("ui_right"):
+		trajPoint.x += 10
+		trajPoint.y += 10
+	if Input.is_action_just_pressed("ui_left"):
+		trajPoint.x -= 10
+		trajPoint.y -= 10
