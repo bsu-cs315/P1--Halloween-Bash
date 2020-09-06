@@ -1,4 +1,4 @@
-# Workflow to publish Godot HTML5 games to GitHub Pages
+# Workflow to publish Godot HTML5 games to GitHub Pages
 #
 # Make sure your project is configured for Web export
 # to the path `build/web`.
