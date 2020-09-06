@@ -20,4 +20,9 @@
 - [x] B-5: Once fired, the projectile is non-interactive.
 - [x] A-1: The player can modify the strength of the projectile's firing.
 - [x] A-2: There is a visual indicator showing the angle at which the projectile will fire.
-- [ ] A-3: The projectile's hitting the target is recognized and logged to the console or otherwise indicated.
+- [x] A-3: The projectile's hitting the target is recognized and logged to the console or otherwise indicated.
+
+## Third-Party Assets
+`Jack O' Lantern` liscenced under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://www.gameart2d.com/jack-o-lantern-free-sprites.html
+
+`Graveyard Platformer Tileset` liscenced under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://www.gameart2d.com/free-graveyard-platformer-tileset.html

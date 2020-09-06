@@ -16,12 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="CS315 Project1"
+run/main_scene="res://project/src/Level.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1090
 window/size/height=710
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 
