@@ -1,15 +1,25 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://project/src/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://project/src/Target.tscn" type="PackedScene" id=2]
 [ext_resource path="res://project/src/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://project/src/Level.gd" type="Script" id=4]
+[ext_resource path="res://project/assets/png/BG.png" type="Texture" id=5]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1090.0
+margin_bottom = 709.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 43.3258, 535.67 )
+position = Vector2( 52.861, 521.897 )
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 

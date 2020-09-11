@@ -1,7 +1,8 @@
 extends Node2D
 
 
-var score
+var _score
+var _projectileCount : float = 3
 
 	
 func update_score():

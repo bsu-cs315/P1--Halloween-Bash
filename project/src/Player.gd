@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+
 var _angle : float = 0
 var _angleIncrement : float = PI/180
 var _power : float = 300
@@ -16,6 +17,7 @@ func _ready():
 	gravity_scale = 0
 
 func _process(delta):
+	$AnimatedSprite.play()
 	if _isFired:
 		return
 	
@@ -28,6 +30,7 @@ func _process(delta):
 		var velocity = direction * _power
 		apply_impulse(Vector2.ZERO, velocity)
 		gravity_scale = 3
+		$AnimatedSprite.animation = "launched"
 		_isFired = true
 	
 	if Input.is_action_pressed("ui_right"):
@@ -46,3 +49,7 @@ func _process(delta):
 func _draw():
 	if not _isFired:
 		draw_line(Vector2.ZERO, Vector2(_powerLength, 0).rotated(_angle), Color.gray, 2)
+
+func _on_Player_body_entered(body):
+	if _isFired:
+		$AnimatedSprite.animation = "hit"
