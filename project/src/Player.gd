@@ -6,9 +6,11 @@ var _angleIncrement : float = PI/180
 var powerLength : float = 100
 var _isFired : bool = false
 
+func _ready():
+	gravity_scale = 0
+
 func _process(delta):
 	_angle = clamp(_angle, -PI/2, 0)
-	print(_angle)
 	strength = clamp(strength, 300, 800)
 	powerLength = clamp(powerLength, 100, 200)
 	
@@ -16,6 +18,7 @@ func _process(delta):
 		var direction = Vector2(1, 0).rotated(_angle)
 		var velocity = direction * strength
 		apply_impulse(Vector2.ZERO, velocity)
+		gravity_scale = 3
 		_isFired = true
 	
 	if Input.is_action_pressed("ui_right"):
