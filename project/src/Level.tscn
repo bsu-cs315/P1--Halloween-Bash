@@ -30,12 +30,23 @@ position = Vector2( 938.452, 285.814 )
 position = Vector2( 939.712, 392.907 )
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_left = 57.3439
-margin_top = 36.9955
-margin_right = 220.344
-margin_bottom = 86.9955
+margin_left = 815.816
+margin_top = 28.1761
+margin_right = 978.816
+margin_bottom = 78.1761
 rect_scale = Vector2( 2, 2 )
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProjectileCount" type="Label" parent="."]
+margin_left = 42.4405
+margin_top = 48.119
+margin_right = 141.44
+margin_bottom = 66.119
+rect_scale = Vector2( 2, 2 )
+text = "Inventory: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
