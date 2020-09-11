@@ -40,3 +40,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_shape_entered" from="Player" to="." method="_on_Player_body_shape_entered"]
+[connection signal="launched" from="Player" to="." method="_on_Player_launched"]

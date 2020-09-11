@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+signal launched
 
 var _angle : float = 0
 var _angleIncrement : float = PI/180
@@ -31,6 +32,7 @@ func _process(delta):
 		apply_impulse(Vector2.ZERO, velocity)
 		gravity_scale = 3
 		$AnimatedSprite.animation = "launched"
+		emit_signal("launched")
 		_isFired = true
 	
 	if Input.is_action_pressed("ui_right"):
