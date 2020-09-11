@@ -10,11 +10,14 @@ func _ready():
 	gravity_scale = 0
 
 func _process(delta):
+	if _isFired:
+		return
+	
 	_angle = clamp(_angle, -PI/2, 0)
 	strength = clamp(strength, 300, 800)
 	powerLength = clamp(powerLength, 100, 200)
 	
-	if Input.is_action_just_pressed("launch") and _isFired == false:
+	if Input.is_action_just_pressed("launch"):
 		var direction = Vector2(1, 0).rotated(_angle)
 		var velocity = direction * strength
 		apply_impulse(Vector2.ZERO, velocity)
