@@ -1,8 +1,12 @@
 extends Node2D
 
-
+export (PackedScene) var Player
 var _score
 var _projectileCount : float = 3
+
+
+# func _ready():
+	# var player = Player.instance()
 
 
 func _process(delta):
@@ -19,3 +23,11 @@ func _on_Player_body_shape_entered(body_id, body, body_shape, local_shape):
 
 func _on_Player_launched():
 	_projectileCount -= 1
+
+
+func _on_Player_sleeping_state_changed():
+	print($Player.sleeping)
+	$Player.queue_free()
+	var player = Player.instance()
+	add_child(player)
+	player.position = $StartPosition.position

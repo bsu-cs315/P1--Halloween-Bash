@@ -14,8 +14,6 @@ const MAX_POWER : float = 800.0
 const MIN_POWER_LENGTH : float = 100.0
 const MAX_POWER_LENGTH : float = 200.0
 
-func _ready():
-	gravity_scale = 0
 
 func _process(delta):
 	$AnimatedSprite.play()
@@ -27,6 +25,7 @@ func _process(delta):
 	_powerLength = range_lerp(_power, MIN_POWER, MAX_POWER, MIN_POWER_LENGTH, MAX_POWER_LENGTH)
 	
 	if Input.is_action_just_pressed("launch"):
+		mode = MODE_RIGID
 		var direction = Vector2(1, 0).rotated(_angle)
 		var velocity = direction * _power
 		apply_impulse(Vector2.ZERO, velocity)

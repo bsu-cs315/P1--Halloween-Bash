@@ -23,12 +23,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 35.0025
+[sub_resource type="CircleShape2D" id=3]
+radius = 38.6404
 
 [node name="Player" type="RigidBody2D"]
 position = Vector2( 50, 533 )
-gravity_scale = 3.0
+mode = 1
 contacts_reported = 5
 contact_monitor = true
 script = ExtResource( 2 )
@@ -39,6 +39,6 @@ frames = SubResource( 2 )
 animation = "spawn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 13.8591, 23.9385 )
-shape = SubResource( 1 )
+position = Vector2( 3.1498, 8.50445 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]

@@ -8,6 +8,7 @@
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
+Player = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 1090.0
@@ -19,7 +20,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 52.861, 521.897 )
+position = Vector2( 46.5613, 524.417 )
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 
@@ -50,5 +51,9 @@ text = "Inventory: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 46.561, 524.417 )
 [connection signal="body_shape_entered" from="Player" to="." method="_on_Player_body_shape_entered"]
 [connection signal="launched" from="Player" to="." method="_on_Player_launched"]
+[connection signal="sleeping_state_changed" from="Player" to="." method="_on_Player_sleeping_state_changed"]
