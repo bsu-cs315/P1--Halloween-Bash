@@ -1,16 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://project/src/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://project/src/Target.tscn" type="PackedScene" id=2]
 [ext_resource path="res://project/src/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://project/src/Level.gd" type="Script" id=4]
 [ext_resource path="res://project/assets/png/BG.png" type="Texture" id=5]
+[ext_resource path="res://project/src/ProjectileCounter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://project/src/BoxCounter.tscn" type="PackedScene" id=7]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
 Player = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 margin_right = 1090.0
 margin_bottom = 709.0
 texture = ExtResource( 5 )
@@ -41,19 +43,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ProjectileCount" type="Label" parent="."]
-margin_left = 42.4405
-margin_top = 48.119
-margin_right = 141.44
-margin_bottom = 66.119
-rect_scale = Vector2( 2, 2 )
-text = "Inventory: "
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 46.561, 524.417 )
+
+[node name="ProjectileCounter" parent="." instance=ExtResource( 6 )]
+margin_left = 35.2778
+margin_top = 37.7976
+margin_right = 135.278
+margin_bottom = 90.7976
+
+[node name="BoxCounter" parent="." instance=ExtResource( 7 )]
+margin_left = 952.5
+margin_top = 28.9782
+margin_right = 1052.5
+margin_bottom = 81.9782
 [connection signal="body_shape_entered" from="Player" to="." method="_on_Player_body_shape_entered"]
 [connection signal="launched" from="Player" to="." method="_on_Player_launched"]
 [connection signal="sleeping_state_changed" from="Player" to="." method="_on_Player_sleeping_state_changed"]

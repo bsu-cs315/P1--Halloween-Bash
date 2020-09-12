@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://project/assets/png/Jump (4).png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.632258, 0.825806, 0.96129 )
+colors = PoolColorArray( 0.027451, 0.0901961, 0.215686, 1, 0.101961, 0.101961, 0.101961, 1, 0.866667, 0.866667, 0.866667, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[node name="ProjectileCounter" type="MarginContainer"]
+margin_right = 100.0
+margin_bottom = 53.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="NinePatchRect" parent="."]
+margin_right = 100.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 100, 40 )
+texture = SubResource( 2 )
+
+[node name="Icon" type="TextureRect" parent="Background"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -67.2421
+margin_top = -50.8393
+margin_right = 605.758
+margin_bottom = 625.161
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 6.29961
+margin_right = -76.0
+margin_bottom = -32.7004
+rect_scale = Vector2( 3, 3 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
