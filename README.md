@@ -28,8 +28,8 @@ The most challenging part of this first iteration was trying to play around in G
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
 - [x] B-3: Earn one star.
-- [ ] A-1: Earn three stars.
-- [ ] ⭐ The player has a small inventory of projectiles, and only one can be launched at a time.
+- [x] A-1: Earn three stars.
+- [x] ⭐ The player has a small inventory of projectiles, and only one can be launched at a time.
 - [x] ⭐ The background and ground use 2D graphics.
 - [x] ⭐ A <abbr title="Heads-Up Display">HUD</abbr> shows the current game state such as the score and number of projectiles remaining.
 
