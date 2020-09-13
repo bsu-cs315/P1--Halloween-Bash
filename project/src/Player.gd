@@ -33,6 +33,7 @@ func _process(delta):
 		$AnimatedSprite.animation = "launched"
 		emit_signal("launched")
 		_isFired = true
+		$AudioStreamPlayer.play()
 	
 	if Input.is_action_pressed("ui_right"):
 		_angle += _angleIncrement
