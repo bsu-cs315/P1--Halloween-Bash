@@ -24,7 +24,7 @@ The most challenging part of this first iteration was trying to play around in G
 - [x] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [x] C-6: The projectile and targets are shown with 2D graphics.
-- [ ] C-7: The game plays an appropriate sound effect when the projectile is fired.
+- [x] C-7: The game plays an appropriate sound effect when the projectile is fired.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
 - [x] B-3: Earn one star.
