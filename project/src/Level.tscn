@@ -29,17 +29,6 @@ position = Vector2( 938.452, 285.814 )
 [node name="Target2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 939.712, 392.907 )
 
-[node name="ScoreLabel" type="Label" parent="."]
-margin_left = 815.816
-margin_top = 28.1761
-margin_right = 978.816
-margin_bottom = 78.1761
-rect_scale = Vector2( 2, 2 )
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 46.561, 524.417 )
 
@@ -54,3 +43,10 @@ margin_left = 952.5
 margin_top = 28.9782
 margin_right = 1052.5
 margin_bottom = 81.9782
+
+[node name="EdgeLimit" type="Area2D" parent="."]
+position = Vector2( 1311.19, 730.946 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EdgeLimit"]
+polygon = PoolVector2Array( -21.5126, -16.8714, -259.623, -18.4588, -259.623, 38.6876, 24.5221, 38.6876, 26.1095, -729.614, -31.037, -729.614 )
+[connection signal="body_shape_entered" from="EdgeLimit" to="." method="_on_EdgeLimit_body_shape_entered"]
