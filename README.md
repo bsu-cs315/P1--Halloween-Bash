@@ -11,8 +11,8 @@ A basic 2D physics based game by Andrew Stafford.
 
 ## Project Report
 ### Reflection:
-**Iteration 1:**
-The most challenging part of this first iteration was trying to play around in Godot Engine to figure out how to implement new features on my own. Some of these that gave me trouble at first were things like drawing a trajectory line and moving that line in a consistent arc versus by Vector points. The challenge of this kept me thinking constantly about how I could implement something I wanted to in the best way possible, and researching what Godot Engine was even capable of as well.
+**Iteration 2:**
+A huge challenge for this iteration was getting the player to respawn with the same properties after stopping. It was hard to get a new instance spawned in without getting null errors from some of the checks I was running for collisions or state changes. After spending a while stuck on the problem, I decided to focus on the other easier aspects and come back to the issue. It helped tremendously to get a new perspective and fresh look on the problem.
 
 ### Self-Evaluation:
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
@@ -25,7 +25,7 @@ The most challenging part of this first iteration was trying to play around in G
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [x] C-6: The projectile and targets are shown with 2D graphics.
 - [x] C-7: The game plays an appropriate sound effect when the projectile is fired.
-- [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
+- [x] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
 - [x] B-3: Earn one star.
 - [x] A-1: Earn three stars.
