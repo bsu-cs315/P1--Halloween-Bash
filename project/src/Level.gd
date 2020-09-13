@@ -15,8 +15,9 @@ func _ready():
 func _process(delta):
 	$ProjectileCounter/Background/Number.text = str(_projectileCount)
 	$BoxCounter/Background/Number.text = str(_boxCount)
-	if player.sleeping:
+	if _projectileCount > 0 and player.sleeping:
 		_on_Player_sleeping_state_changed()
+	
 	
 func update_score():
 	$ScoreLabel.text = "Target Hit!"
@@ -30,7 +31,9 @@ func _on_Player_body_shape_entered(body_id, body, body_shape, local_shape):
 
 func _on_Player_sleeping_state_changed():
 	player.queue_free()
-	player = Player.instance()
-	add_child(player)
-	player.position = $StartPosition.position
 	_projectileCount -= 1
+	
+	if _projectileCount > 0:
+		player = Player.instance()
+		add_child(player)
+		player.position = $StartPosition.position
