@@ -15,11 +15,11 @@ A basic 2D physics based game by Andrew Stafford.
 A huge challenge for this iteration was getting the player to respawn with the same properties after stopping. It was hard to get a new instance spawned in without getting null errors from some of the checks I was running for collisions or state changes. After spending a while stuck on the problem, I decided to focus on the other easier aspects and come back to the issue. It helped tremendously to get a new perspective and fresh look on the problem.
 
 ### Self-Evaluation:
-- [ ] D-1: The repository link is submitted to Canvas before the project deadline.
+- [x] D-1: The repository link is submitted to Canvas before the project deadline.
 - [x] D-2: The repository contains a <code>README.md</code> file in its top-level directory.
 - [x] D-3: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of M or less.
 - [x] C-1: Your repository is well-formed, with an appropriate <code>.gitignore</code> file and no unnecessary files tracked.
-- [ ] C-2: Your release is tagged using <a href="https://semver.org/">semantic versioning</a> where the major version is zero, the minor version is the iteration number, and the patch version is incremented as usual for each change made to the minor version, and the release name matches the release tag.
+- [x] C-2: Your release is tagged using <a href="https://semver.org/">semantic versioning</a> where the major version is zero, the minor version is the iteration number, and the patch version is incremented as usual for each change made to the minor version, and the release name matches the release tag.
 - [x] C-3: You have a clear legal right to use all incorporated assets, and the licenses for all third-party assets are tracked in the <code>README.md</code> file.
 - [x] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
