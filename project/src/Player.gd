@@ -59,3 +59,4 @@ func _on_Player_body_entered(_body):
 func _on_Player_sleeping_state_changed():
 	if _isFired and sleeping:
 		emit_signal("player_stopped")
+		queue_free()
