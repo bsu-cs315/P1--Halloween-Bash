@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+signal player_stopped
 
 var _angle : float = 0
 var _angleIncrement : float = PI/180
@@ -14,7 +15,7 @@ const MIN_POWER_LENGTH : float = 100.0
 const MAX_POWER_LENGTH : float = 200.0
 
 
-func _process(delta):
+func _process(_delta):
 	$AnimatedSprite.play()
 	if _isFired:
 		return
@@ -50,6 +51,11 @@ func _draw():
 	if not _isFired:
 		draw_line(Vector2.ZERO, Vector2(_powerLength, 0).rotated(_angle), Color.gray, 2)
 
-func _on_Player_body_entered(body):
+func _on_Player_body_entered(_body):
 	if _isFired:
 		$AnimatedSprite.animation = "hit"
+
+
+func _on_Player_sleeping_state_changed():
+	if _isFired and sleeping:
+		emit_signal("player_stopped")

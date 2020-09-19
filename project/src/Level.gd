@@ -10,16 +10,15 @@ var _boxCount : float = 2
 func _ready():
 	add_child(player)
 	player.position = $StartPosition.position
+	player.connect("player_stopped", self, "_on_player_stopped", [], CONNECT_ONESHOT)
 
 
-func _process(delta):
+func _process(_delta):
 	$ProjectileCounter/Background/Number.text = str(_projectileCount)
 	$BoxCounter/Background/Number.text = str(_boxCount)
-	if _projectileCount > 0 and player.sleeping:
-		_on_Player_stopped()
 
 
-func _on_Player_stopped():
+func _on_player_stopped():
 	player.queue_free()
 	_projectileCount -= 1
 	
@@ -27,9 +26,10 @@ func _on_Player_stopped():
 		player = Player.instance()
 		add_child(player)
 		player.position = $StartPosition.position
+		player.connect("player_stopped", self, "_on_player_stopped", [], CONNECT_ONESHOT)
 
 
-func _on_EdgeLimit_body_shape_entered(body_id, body, body_shape, area_shape):
+func _on_EdgeLimit_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 	if $Target != null:
 		if body_id == $Target.get_instance_id():
 			$Target.queue_free()
@@ -40,5 +40,5 @@ func _on_EdgeLimit_body_shape_entered(body_id, body, body_shape, area_shape):
 			_boxCount -= 1
 	if player != null:
 		if body_id == player.get_instance_id():
-			_on_Player_stopped()
+			_on_player_stopped()
 		
