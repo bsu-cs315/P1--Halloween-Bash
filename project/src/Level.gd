@@ -41,6 +41,10 @@ func _update_gameover_hud():
 		_main_menu_button.visible = true
 
 
+func _on_MainMenuButton_pressed():
+	get_tree().change_scene(title_scene_path)
+
+
 func _spawn_player():
 	player = Player.instance()
 	call_deferred("add_child", player)
@@ -56,7 +60,6 @@ func _on_player_stopped():
 		_spawn_player()
 	else:
 		_update_gameover_hud()
-		# get_tree().change_scene(title_scene_path)
 
 
 func _on_EdgeLimit_body_shape_entered(body_id, _body, _body_shape, _area_shape):
@@ -75,4 +78,3 @@ func _on_EdgeLimit_body_shape_entered(body_id, _body, _body_shape, _area_shape):
 	if player != null:
 		if body_id == player.get_instance_id():
 			_on_player_stopped()
-		
