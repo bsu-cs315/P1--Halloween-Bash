@@ -12,7 +12,7 @@ A basic 2D physics based game by Andrew Stafford.
 ## Project Report
 ### Reflection:
 **Iteration 3:**
-[TODO]
+In iteration 3, the most challenging, but also most interesting and fun feature was switching between a title scene and the main level scene. I tried a couple different ways of going about the switching and ran into error after error before using the simple change_to method. Once I found the right method it was as easy as calling it in the correct place within the script and it was simple. I enjoyed learning about switching between scenes because it gives me many ideas about the possibilities of having multiple levels or stages and creating more of a fully fledged game at some point in time.
 
 ### Self-Evaluation:
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
@@ -24,7 +24,7 @@ A basic 2D physics based game by Andrew Stafford.
 - [x] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
 - [x] C-6: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
-- [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
+- [x] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
 - [x] B-3: Earn one star.
 - [ ] A-1: Earn three stars.
