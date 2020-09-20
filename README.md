@@ -12,7 +12,7 @@ A basic 2D physics based game by Andrew Stafford.
 ## Project Report
 ### Reflection:
 **Iteration 3:**
-A huge challenge for this iteration was getting the player to respawn with the same properties after stopping. It was hard to get a new instance spawned in without getting null errors from some of the checks I was running for collisions or state changes. After spending a while stuck on the problem, I decided to focus on the other easier aspects and come back to the issue. It helped tremendously to get a new perspective and fresh look on the problem.
+[TODO]
 
 ### Self-Evaluation:
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
@@ -23,7 +23,7 @@ A huge challenge for this iteration was getting the player to respawn with the s
 - [x] C-3: You have a clear legal right to use all incorporated assets, and the licenses for all third-party assets are tracked in the <code>README.md</code> file.
 - [x] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [x] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
-- [ ] C-6: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
+- [x] C-6: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
 - [ ] B-3: Earn one star.
@@ -38,3 +38,5 @@ A huge challenge for this iteration was getting the player to respawn with the s
 `Graveyard Platformer Tileset` liscenced under [Creative Common Zero (CCO)](https://creativecommons.org/publicdomain/zero/1.0/). Source: https://www.gameart2d.com/free-graveyard-platformer-tileset.html
 
 `Nightmare Before Christmas` font liscenced "Free for Personal Use". Source: https://www.1001freefonts.com/nightmare-before-christmas.font
+
+`X Bones` font liscenced "Free for Personal Use". Source: https://www.1001freefonts.com/x-bones.font

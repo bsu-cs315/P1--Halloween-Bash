@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://project/src/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://project/src/Target.tscn" type="PackedScene" id=2]
@@ -7,6 +7,20 @@
 [ext_resource path="res://project/assets/png/BG.png" type="Texture" id=5]
 [ext_resource path="res://project/src/ProjectileCounter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://project/src/BoxCounter.tscn" type="PackedScene" id=7]
+[ext_resource path="res://project/assets/Nightmare Before Christmas.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://project/assets/xbones.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 9 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
@@ -49,4 +63,41 @@ position = Vector2( 1311.19, 730.946 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EdgeLimit"]
 polygon = PoolVector2Array( -21.5126, -16.8714, -259.623, -18.4588, -259.623, 38.6876, 24.5221, 38.6876, 26.1095, -729.614, -31.037, -729.614 )
+
+[node name="GameOverHUD" type="VBoxContainer" parent="."]
+margin_left = 16.9706
+margin_top = 149.907
+margin_right = 368.971
+margin_bottom = 343.907
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="GameOverHUD"]
+margin_right = 352.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+align = 1
+
+[node name="ScoreLabel" type="Label" parent="GameOverHUD"]
+margin_top = 118.0
+margin_right = 352.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 2 )
+text = "Score: N"
+align = 1
+
+[node name="MainMenuButton" type="Button" parent="GameOverHUD"]
+margin_left = 106.0
+margin_top = 164.0
+margin_right = 245.0
+margin_bottom = 194.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_shape_entered" from="EdgeLimit" to="." method="_on_EdgeLimit_body_shape_entered"]

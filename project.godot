@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CS315 Project1"
-run/main_scene="res://project/src/Level.tscn"
+run/main_scene="res://project/src/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [display]
