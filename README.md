@@ -40,3 +40,5 @@ In iteration 3, the most challenging, but also most interesting and fun feature 
 `Nightmare Before Christmas` font liscenced "Free for Personal Use". Source: https://www.1001freefonts.com/nightmare-before-christmas.font
 
 `X Bones` font liscenced "Free for Personal Use". Source: https://www.1001freefonts.com/x-bones.font
+
+`Foggy Forest` music loop liscenced under [Creative Commons by Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Source: https://www.playonloop.com/2019-music-loops/foggy-forest/

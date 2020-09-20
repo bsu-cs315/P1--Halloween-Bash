@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://project/src/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://project/src/Target.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://project/src/BoxCounter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://project/assets/Nightmare Before Christmas.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://project/assets/xbones.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://project/assets/POL-foggy-forest-short.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -100,5 +101,10 @@ text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -15.0
+autoplay = true
 [connection signal="body_shape_entered" from="EdgeLimit" to="." method="_on_EdgeLimit_body_shape_entered"]
 [connection signal="pressed" from="GameOverHUD/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
