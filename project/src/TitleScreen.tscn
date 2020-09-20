@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://project/assets/png/HalloweenBashLogo.png" type="Texture" id=1]
 [ext_resource path="res://project/assets/Nightmare Before Christmas.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,21 @@
 [sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fly_In"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -505.139, 253.736 ), Vector2( 545, 253.736 ) ]
+}
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 3 )
@@ -34,8 +49,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="Sprite" parent="."]
-position = Vector2( 540.937, 272.236 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fly_In = SubResource( 2 )
+
+[node name="Logo" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 545, 253.736 )
 scale = Vector2( 1.44245, 1.32536 )
 texture = ExtResource( 1 )
 [connection signal="pressed" from="Background/StartButton" to="." method="_on_StartButton_pressed"]

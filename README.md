@@ -29,7 +29,7 @@ A basic 2D physics based game by Andrew Stafford.
 - [x] B-3: Earn one star.
 - [ ] A-1: Earn three stars.
 - [x] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
-- [ ] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
+- [x] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
 - [ ] ⭐ The source code complies with our adopted style guide.
 
 ## Third-Party Assets
