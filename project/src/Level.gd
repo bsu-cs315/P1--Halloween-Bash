@@ -4,16 +4,23 @@ export (PackedScene) var Player = load("res://project/src/Player.tscn")
 var player
 onready var target = get_node("Target")
 onready var target2 = get_node("Target2")
-var _score
+
 var _projectileCount : float = 3
 onready var _projectileCounter = get_node("ProjectileCounter/Background/Number")
 var _boxCount : float = 2
 onready var _boxCounter = get_node("BoxCounter/Background/Number")
 
+var title_scene_path = "res://project/src/TitleScreen.tscn"
+
 
 func _ready():
 	_spawn_player()
 	_update_hud()
+	
+	
+func _process(_delta):
+	if _projectileCount <= 0:
+		get_tree().change_scene(title_scene_path)
 
 
 func _update_hud():
