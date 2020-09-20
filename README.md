@@ -26,9 +26,9 @@ A basic 2D physics based game by Andrew Stafford.
 - [x] C-6: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
 - [ ] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [x] B-2: The playable game is published to GitHub Pages and linked from the <code>README.md</code> file.
-- [ ] B-3: Earn one star.
+- [x] B-3: Earn one star.
 - [ ] A-1: Earn three stars.
-- [ ] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
+- [x] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
 - [ ] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
 - [ ] ⭐ The source code complies with our adopted style guide.
 
