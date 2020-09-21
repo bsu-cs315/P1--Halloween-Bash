@@ -42,7 +42,7 @@ func _update_gameover_hud():
 
 
 func _on_MainMenuButton_pressed():
-	get_tree().change_scene(title_scene_path)
+	var _ignored = get_tree().change_scene(title_scene_path)
 
 
 func _spawn_player():
