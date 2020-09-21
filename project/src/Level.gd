@@ -5,10 +5,10 @@ var player
 onready var target = get_node("Target")
 onready var target2 = get_node("Target2")
 
-var _projectileCount := 3
-onready var _projectileCounter = get_node("ProjectileCounter/Background/Number")
-var _boxCount := 2
-onready var _boxCounter = get_node("BoxCounter/Background/Number")
+var _projectile_count := 3
+onready var _projectile_counter = get_node("ProjectileCounter/Background/Number")
+var _box_count := 2
+onready var _box_counter = get_node("BoxCounter/Background/Number")
 
 var score := 0
 onready var _score_label = get_node("GameOverHUD/ScoreLabel")
@@ -25,13 +25,13 @@ func _ready():
 
 
 func _update_hud():
-		_projectileCounter.text = str(_projectileCount)
-		_boxCounter.text = str(_boxCount)
+		_projectile_counter.text = str(_projectile_count)
+		_box_counter.text = str(_box_count)
 
 func _update_gameover_hud():
 	_score_label.text = "Score: " + str(score)
 	
-	if _projectileCount > 0:
+	if _projectile_count > 0:
 		_game_over_label.visible = false
 		_score_label.visible = false
 		_main_menu_button.visible = false
@@ -53,28 +53,28 @@ func _spawn_player():
 
 
 func _on_player_stopped():
-	_projectileCount -= 1
+	_projectile_count -= 1
 	_update_hud()
 	
-	if _projectileCount > 0:
+	if _projectile_count > 0:
 		_spawn_player()
 	else:
 		_update_gameover_hud()
 
 
 func _on_EdgeLimit_body_shape_entered(body_id, _body, _body_shape, _area_shape):
-	if target != null:
+	if target:
 		if body_id == target.get_instance_id():
 			target.queue_free()
-			_boxCount -= 1
+			_box_count -= 1
 			score += 10
 			_update_hud()
-	if target2 != null:
+	if target2:
 		if body_id == target2.get_instance_id():
 			target2.queue_free()
-			_boxCount -= 1
+			_box_count -= 1
 			score += 10
 			_update_hud()
-	if player != null:
+	if player:
 		if body_id == player.get_instance_id():
 			_on_player_stopped()
